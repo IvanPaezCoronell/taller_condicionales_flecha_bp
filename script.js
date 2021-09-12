@@ -82,3 +82,21 @@ compra_auto_terreno = (costo, devaluacion, incremento) => {
     }
 }
 console.log(compra_auto_terreno(500,78,4));
+
+
+
+// 6. Fabrica de Computadoras
+computadoras = (n_computadoras) => {
+    let total_sin_descuento_pc = (n_computadoras * 11000);
+    if(n_computadoras < 5){
+        descuento_pc = total_sin_descuento_pc - (total_sin_descuento_pc * 0.1);
+        return `El total a pagar por las ${n_computadoras} computadoras es de: $${descuento_pc}`;
+    }else if(n_computadoras >= 5 && n_computadoras < 10){
+        descuento_pc = total_sin_descuento_pc - (total_sin_descuento_pc * 0.2);
+        return `El total a pagar por las ${n_computadoras} computadoras es de: $${descuento_pc}`;
+    }else{
+        descuento_pc = total_sin_descuento_pc - (total_sin_descuento_pc * 0.4);
+        return `El total a pagar por las ${n_computadoras} computadoras es de: $${descuento_pc}`;
+    }
+}
+console.log(computadoras(8));
