@@ -29,3 +29,21 @@ supermercado = (numero, valor_mercado)=> {
     }
 }
 console.log(supermercado(75, 500));
+
+
+
+// 3. Compañia de seguros
+compania_seguros = (monto_fianza) => {
+    if(monto_fianza < 50000){
+        let cuota = (monto_fianza * 0.03)
+        let total_cliente = (cuota + monto_fianza);
+        return `La cuota a pagar es de: $${cuota}
+        \n El valor a pagar al cliente es de: $${total_cliente}`;
+    }else{
+        let cuota = (monto_fianza * 0.02)
+        let total_cliente = (cuota + monto_fianza);
+        return `La cuota a pagar es de: $${cuota}
+        \n El valor a pagar al cliente es de: $${total_cliente}`;
+    }
+}
+console.log(compania_seguros(45000));
