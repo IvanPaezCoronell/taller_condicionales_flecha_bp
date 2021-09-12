@@ -148,3 +148,20 @@ compra_piezas = (total_compra) => {
     }
 }
 console.log(compra_piezas(600000));
+
+
+
+// Leer 2 numeros
+leer = (n1,n2) => {
+    if(n1 == n2){
+        let multi = (n1 * n2);
+        return `El resultado de ${n1} * ${n2} es: ${multi} `;
+    }else if (n1 > n2){
+        let resta = (n1 - n2);
+        return `El resultado de ${n1} - ${n2} es: ${resta} `;
+    }else{
+        let suma = (n1 + n2);
+        return `El resultado de ${n1} + ${n2} es: ${suma} `;
+    }
+}
+console.log(leer(10,20));
