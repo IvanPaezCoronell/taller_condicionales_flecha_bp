@@ -100,3 +100,27 @@ computadoras = (n_computadoras) => {
     }
 }
 console.log(computadoras(8));
+
+
+
+// 7. proveedor de estereos 
+proveedor = (valor_estereo, marca) => {
+    if(valor_estereo >= 2000 && marca == 'NOSY'){
+        let costo_sin_iva = (valor_estereo - (valor_estereo * 0.1));
+        let iva = ((costo_sin_iva * 0.16) + costo_sin_iva);
+        let desc_marca_nosy = (iva - (iva * 0.05));
+        return `Valor a pagar por el aparato de marca NOSY: $${desc_marca_nosy}`;
+    }else if (valor_estereo >= 2000 && marca != `NOSY`){
+        let costo_sin_iva = (valor_estereo - (valor_estereo * 0.1));
+        let iva = ((costo_sin_iva * 0.16) + costo_sin_iva);
+        return `Valor a pagar por el aparato de marca ${marca}: $${iva}`;
+    }else if (valor_estereo < 2000 && marca == `NOSY`){
+        let iva = ((valor_estereo * 0.16) + valor_estereo);
+        let desc_marca_nosy = (iva - (iva * 0.05));
+        return `Valor a pagar por el aparato de marca NOSY: $${desc_marca_nosy}`;
+    }else if (valor_estereo < 2000 && marca != `NOSY`){
+        let iva = ((costo_sin_iva * 0.16) + costo_sin_iva);
+        return `Valor a pagar por el aparato de marca ${marca}: $${iva}`;
+    }
+}
+console.log(proveedor(2500,`NOSY`));
