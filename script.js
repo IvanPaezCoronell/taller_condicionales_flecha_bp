@@ -67,3 +67,18 @@ fabrica = (p_lunes,p_martes,p_miercoles,p_jueves,p_viernes,gan_lunes,gan_martes,
     }
 }
 console.log(fabrica(150,350,151,400,541,50000,45000,20000,35000,25000));
+
+
+
+// 5. compra automovil o terreno
+compra_auto_terreno = (costo, devaluacion, incremento) => {
+    let devaluacion_auto = (costo - (devaluacion * 3));
+    let incremento_terreno = (costo + (incremento * 3));
+    let mitad_incremento = (incremento_terreno / 2);
+    if(devaluacion_auto < mitad_incremento){
+        return `Comprar Automovil!`;
+    }else{
+        return `NO comprar Automovil`;
+    }
+}
+console.log(compra_auto_terreno(500,78,4));
