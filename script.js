@@ -47,3 +47,23 @@ compania_seguros = (monto_fianza) => {
     }
 }
 console.log(compania_seguros(45000));
+
+
+
+// 4. control de contaminacion en una fabrica
+fabrica = (p_lunes,p_martes,p_miercoles,p_jueves,p_viernes,gan_lunes,gan_martes,gan_miercoles,gan_jueves,gan_viernes) => {
+    let promedio = (p_lunes + p_martes + p_miercoles + p_jueves + p_viernes) / 5
+    let ganancias = (gan_lunes + gan_martes + gan_miercoles + gan_jueves + gan_viernes)
+    if(promedio > 170){
+        let sancion = (ganancias * 0.5);
+        let multa = (ganancias - sancion);
+        return `El promedio de puntos de la semana es ${promedio}
+        \n El promedio es mayor a 170, debe parar la produccion.
+        \n La ganacia total de la semana es de: $${ganancias}
+        \n La multa por no parar produccion es de: $${multa}`;
+    }else{
+        return `¡NO recibe multa!
+        \n La ganacia total de la semana es de: $${ganancias}`
+    }
+}
+console.log(fabrica(150,350,151,400,541,50000,45000,20000,35000,25000));
