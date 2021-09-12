@@ -11,3 +11,21 @@ compra_camisas = (n_camisas, valor_camisa) => {
     }
 }
 console.log(compra_camisas(4, 200)); 
+
+
+
+// 2. Promocioines en un Supermercado
+supermercado = (numero, valor_mercado)=> {
+    if(numero < 74){
+        let calcular_descuento = (valor_mercado * 0.15);
+        let descuento_supermercado = (valor_mercado - calcular_descuento);
+        return `Se descuenta $${calcular_descuento} del total de la compra.
+        \n El total a pagar con descuento incluido es: $${descuento_supermercado} `;
+    }else{
+        let calcular_descuento = (valor_mercado * 0.2);
+        let descuento_supermercado = (valor_mercado - calcular_descuento);
+        return `Se descuenta $${calcular_descuento} del total de la compra.
+        \n El total a pagar con descuento incluido es: $${descuento_supermercado} `;
+    }
+}
+console.log(supermercado(75, 500));
