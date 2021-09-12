@@ -124,3 +124,27 @@ proveedor = (valor_estereo, marca) => {
     }
 }
 console.log(proveedor(2500,`NOSY`));
+
+
+
+// Compra de piezas a fabrica de reaacciones
+compra_piezas = (total_compra) => {
+    if(total_compra > 500000){
+        let inversion = (total_compra * 0.55);
+        let prestamo = (total_compra * 0.3);
+        let credito = (total_compra * 0.15);
+        let intereses = (credito * 0.2);
+        return `Cantidad a invertir: $${inversion}
+        \n Valor del prestamo: $${prestamo}
+        \n Valor del credito: $${credito}
+        \n Intereses: $${intereses}`
+    }else {
+        let inversion = (total_compra * 0.7);
+        let credito = (total_compra * 0.3);
+        let intereses = (credito * 0.2);
+        return `Cantidad a invertir: $${inversion}
+        \n Valor del credito: $${credito}
+        \n Intereses: $${intereses}`
+    }
+}
+console.log(compra_piezas(600000));
