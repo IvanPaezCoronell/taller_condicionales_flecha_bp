@@ -165,3 +165,17 @@ leer = (n1,n2) => {
     }
 }
 console.log(leer(10,20));
+
+
+
+// 10. Imprimir el numero mayor
+mayor = (n_1,n_2,n_3) => {
+    if (n_1 > n_2 && n_1 > n_3){
+        return `El numero mayor es: ${n_1}`;
+    }else if (n_1 < n_2 && n_2 > n_3){
+        return `El numero mayor es: ${n_2}`;
+    }else if (n_1 < n_3 && n_2 < n_3){
+        return `El numero mayor es: ${n_3}`;
+    }
+}
+console.log(mayor(15,12,6));
